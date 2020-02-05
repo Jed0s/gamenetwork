@@ -1,10 +1,16 @@
 from django import forms
-from .models import Book, Song, Movie
+from .models import Book, Song, Movie, DeputyFail
 
-class BookForm(forms.Form):
+class BookForm(forms.ModelForm):
     class Meta:
         model = Book
         fields = ('title', 'author', 'genre')
+
+
+class DeputyFailForm(forms.ModelForm):
+    class Meta:
+        model = DeputyFail
+        fields = ('name', 'surname', 'consigment', 'fail_date', 'fail')
 
 """
 LINKS:

@@ -15,7 +15,7 @@
     </div>
     <div>
         <p>Please choose a category:</p>
-        <form>
+        <form> {% csrf_token %}
             <input type="radio" name="category" value="Book">Book<br>
             <input type="radio" name="category" value="Movie">Movie<br>
             <input type="radio" name="category" value="Song">Song<br>
