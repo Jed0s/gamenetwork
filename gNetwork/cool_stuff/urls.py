@@ -3,5 +3,5 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'cool_stuff/widgets/$', views.widgets_view, name='widgets_url'),
+    url(r'widgets/$', views.widgets_view, name='widgets_url'),
 ]

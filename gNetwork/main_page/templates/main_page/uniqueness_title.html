@@ -14,15 +14,8 @@
         <p>You can register your own titles soon.</p>
     </div>
     <div>
-        <p>Please choose a category:</p>
-        <form> {% csrf_token %}
-            <input type="radio" name="category" value="Book">Book<br>
-            <input type="radio" name="category" value="Movie">Movie<br>
-            <input type="radio" name="category" value="Song">Song<br>
-        </form>
-        <form method="post"> {% csrf_token %}
-            {{ form.as_p }}
-        </form>
+        <p>Please choose a category: ''here must be list of categories''</p>
+
     </div>
 </body>
 </html>

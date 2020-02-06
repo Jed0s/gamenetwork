@@ -5,6 +5,6 @@ from .forms import WidgetForm
 def widgets_view(request):
     widget = WidgetForm()
     context = {
-        'widget': widget
+        'widget': widget,
     }
-    return render(request, 'cool_stuff/widgets.html', context)
+    return render(request, "cool_stuff/widgets.html", context)

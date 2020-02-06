@@ -10,8 +10,8 @@ FAVORITE_COLORS_CHOICES = (
 
 
 class WidgetForm(forms.Form):
-    bitrh_year = forms.DateField(widget=forms.SelectDateWidget(years=BIRTH_YEAR_CHOICES))
-    favorit_colors = forms.MultipleChoiceField(
+    birth_year = forms.DateField(widget=forms.SelectDateWidget(years=BIRTH_YEAR_CHOICES))
+    favorite_colors = forms.MultipleChoiceField(
         required=False,
         widget=forms.CheckboxSelectMultiple,
         choices=FAVORITE_COLORS_CHOICES,
