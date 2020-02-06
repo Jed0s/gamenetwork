@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .forms import BookForm, DeputyFailForm
+from .forms import TitleForm, DeputyFailForm
 import datetime
 
 # Create your views here.
@@ -7,8 +7,11 @@ def main_page_view(request):
     return render(request, 'main_page/main_page.html')
 
 def uniqueness_title_view(request):
-    form = BookForm()
-    return render(request, 'main_page/uniqueness_title.html', {'form': form})
+    categories = TitleForm()
+    return render(request, 'main_page/uniqueness_title.html', {'categories': categories})
+
+def selected_title_view(request, choice):
+    pass
 
 def deputy_fails_view(request):
     form = DeputyFailForm() # ?
@@ -16,7 +19,7 @@ def deputy_fails_view(request):
         form.save()
 
     context = {
-        'form': form
+        'form': form,
     }
     return render(request, "main_page/deputy_fails.html", context)
 
